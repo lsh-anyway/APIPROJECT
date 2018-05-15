@@ -22,7 +22,6 @@
 > | DELETE | /users/:id |  | - delete particular user
 > | GET | /users/:id/cars |  | - lists all cars sold by particular user
 > | POST | /users/:id/cars | make,<br>model,<br>year | - creates a new car for particular user
-> |
 > | GET | /cars |  | - lists all cars
 > | POST | /cars | seller,<br>make ,<br>model ,<br>year | - creates a new car
 > | GET | /cars/:id |  | - lists particular car
