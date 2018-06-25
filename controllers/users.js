@@ -108,7 +108,7 @@ module.exports = {
     const { userId } = req.value.params;
     const newUser = req.value.body;
 
-    const result = User.findByIdAndUpdate(userId, newUser);
+    const result = await User.findByIdAndUpdate(userId, newUser);
     console.log(result);
     res.status(200).json({ success: true });
   },
@@ -119,7 +119,7 @@ module.exports = {
     const { userId } = req.value.params;
     const newUser = req.value.body;
 
-    const result = User.findByIdAndUpdate(userId, newUser);
+    const result = await User.findByIdAndUpdate(userId, newUser);
     console.log(result);
     res.status(200).json({ success: true });
   },

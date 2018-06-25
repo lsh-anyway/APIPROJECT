@@ -10,7 +10,7 @@ module.exports = {
 
   newCar: async (req, res, next) => {
     // 1. Find the actual seller
-    const seller = User.findById(req.value.body.seller);
+    const seller = await User.findById(req.value.body.seller);
 
     // 2. Create a new car
     const newCar = req.value.body;
@@ -40,7 +40,7 @@ module.exports = {
     const { carId } = req.value.params;
     const newCar = req.value.body;
 
-    const result = User.findByIdAndUpdate(carId, newCar);
+    const result = await User.findByIdAndUpdate(carId, newCar);
     console.log(result);
     res.status(200).json({ success: true });
   },
@@ -49,7 +49,7 @@ module.exports = {
     const { carId } = req.value.params;
     const newCar = req.value.body;
 
-    const result = Car.findByIdAndUpdate(carId, newCar);
+    const result = await Car.findByIdAndUpdate(carId, newCar);
     console.log(result);
     res.status(201).json({ success: true });
   },
